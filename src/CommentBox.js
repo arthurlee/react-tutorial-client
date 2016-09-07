@@ -9,7 +9,7 @@ var CommentBox = React.createClass({
 		}
 	},
 
-	componentDidMount() {
+	loadCommentsFromServer: function () {
 		$.ajax({
 			url: this.props.url,
 			dataType: 'json',
@@ -21,6 +21,11 @@ var CommentBox = React.createClass({
 				console.error(this.props.url, status, err.toString());
 			}.bind(this)
 		});
+	},
+
+	componentDidMount() {
+		this.loadCommentsFromServer();
+		setInterval(this.loadCommentsFromServer, this.props.pollInterval);
 	},
 
 	render: function() {
