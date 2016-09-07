@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>React Tutorial</title>
+
+	<script src="../react/react.min.js"></script>
+	<script src="../react/react-dom.min.js"></script>
+	<script src="../js/browser.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/remarkable.min.js"></script>
+
+	<script type="text/babel" src="Comment.js"></script>
+	<script type="text/babel" src="CommentList.js"></script>
+	<script type="text/babel" src="CommentForm.js"></script>
+	<script type="text/babel" src="CommentBox.js"></script>
+</head>
+<body>
+	<div id="content"></div>
+	<script type="text/babel">
+		ReactDOM.render(
+			<CommentBox />,
+			document.getElementById('content')
+		);
+	</script>
+</body>
+</html>
