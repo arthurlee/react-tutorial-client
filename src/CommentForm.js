@@ -35,7 +35,7 @@ var CommentForm = React.createClass({
 
 	render: function() {
 		return (
-			<form className="commentForm">
+			<form className="commentForm" onSubmit={this.handleSubmit}>
 				<input
 					type="text"
 					placeholder="Your name"
